@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="style/geral.css">
+<script src="https://kit.fontawesome.com/28ad299d55.js" crossorigin="anonymous"></script>
+
+<body>
+    <section class="dashboard" id="dashboard">
+        <div class="btn">
+            <button type="submit" data-entrar="sair">Sair</button>
+        </div>
+        <div class="titulos">
+            <p class="titulo-principal">Os melhores cursos</p>
+            <p class="sub-titulo">Usando as melhores tecnologias</p>
+        </div>
+        <div class="cards">
+            <div class="card card-professores" id="card-professores">
+                <p class="sub-titulo">Os melhores professores</p>
+                <p>Professores qualificados e certificados</p>
+                <p><i class="fas fa-school fa-2x"></i></p>
+            </div>
+            <div class="card-central">
+                <div class="card card-cursos" id="card-cursos">
+                    <p class="sub-titulo">Os melhores Cursos</p>
+                    <p>Focado nas tecnologias mais utilizadas e mais relevantes</p>
+                    <p><i class="fas fa-laptop-code fa-2x"></i></p>
+                </div>
+                <div class="card card-tecnologias" id="card-tecnologias">
+                    <p class="sub-titulo">As melhores tecnologias</p>
+                    <p>C#, Java, JavaScript, HTML5, CSS3 e muito mais</p>
+                    <p><i class="fas fa-graduation-cap fa-2x"></i></p>
+                </div>
+            </div>
+            <div class="card card-assinatura" id="card-assinatura">
+                <p class="sub-titulo">Por Apenas 29R$/mês</p>
+                <button>Assine Aqui</button>
+            </div>
+        </div>
+    </section>
+    <script>
+        const botaoSair = document.querySelector('[data-entrar="sair"]');
+        const dashboard = document.querySelector('#dashboard');
+        const cardProfessores = document.querySelector('#card-professores');
+        const cardCursos = document.querySelector('#card-cursos');
+        const cardTecnologias = document.querySelector('#card-tecnologias');
+        const cardAssinatura = document.querySelector('#card-assinatura');
+
+        function handleDeslogar(event) {
+            window.location.href = 'index.html'
+        }
+        setTimeout(() => {
+            cardProfessores.classList.add('ativo');
+        }, 1000);
+        setTimeout(() => {
+            cardCursos.classList.add('ativo');
+        }, 2000);
+        setTimeout(() => {
+            cardTecnologias.classList.add('ativo');
+        }, 3000);
+        setTimeout(() => {
+            cardAssinatura.classList.add('ativo');
+        }, 4000);
+                
+        botaoSair.addEventListener('click', handleDeslogar);
+    </script>
+</body>

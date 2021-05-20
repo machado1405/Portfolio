@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema com login</title>
+    <script>
+        document.documentElement.className += " js";
+    </script>
+    <link rel="stylesheet" href="style/geral.css">
+</head>
+
+<body>
+    <div class="login">
+        <button data-modal="abrirLogin">Entrar</button>
+    </div>
+    <section class="grid" id="gridAnimacao">
+        <div class="join">
+            <p class="titulo-principal">Junte-se a nossa comunidade</p>
+            <p class="titulo-secundario">30-dias de acesso</p>
+            <p class="texto-cinza">
+                Ganhe acesso a nossa biblioteca completa de tutoriais
+                junto com especialistas em programção. Perfeito para qualquer
+                desenvolvedor que é sério sobre suas habilidades.
+            </p>
+        </div>
+        <div class="secundaria">
+            <div class="mon">
+                <p>Mensalidade</p>
+                <p><span class="preço">R$29</span> por mês</p>
+                <p>Acesso total por menos de 1 real ao dia</p>
+                <button data-modal="abrir" class="link">Cadastre-se</button>
+            </div>
+            <div class="why">
+                <p>Porque nos escolher?</p>
+                <p>
+                    Tutoriais feitos por especialistas do meio,
+                    revisão de código, exercícios de codigicação
+                    acesso ao nosso repositório do github, fórum da comunidade
+                    e novos vídeos toda semana!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="modal-container" data-modal="container">
+        <div class="modal">
+            <button data-modal="fechar" class="fechar">X</button>
+            <form action="">
+                <label for="email">E-mail:</label>
+                <input type="email" for="email" id="email" required>
+                <label for="senha">Senha:</label>
+                <input type="password" for="senha" id="senha" required>
+                <label for="repetirSenha">Digite a senha novamente:</label>
+                <input type="password" for="repetirSenha" id="repetirSenha" required>
+                <p data-errorMessage="cadastro" class="errorMessage"></p>
+                <p data-successMessage="cadastro" class="successMessage"></p>
+                <button type="submit" data-cadastrar="cadastrar">Cadastrar</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="modal-login" data-modal="containerLogin">
+        <div class="modal">
+            <button data-modal="fecharLogin" class="fechar">X</button>
+            <form action="logado.html">
+                <label for="emailLogin">E-mail:</label>
+                <input type="emailLogin" for="emailLogin" id="emailLogin" required>
+                <label for="senhaLogin">Senha:</label>
+                <input type="password" for="senhaLogin" id="senhaLogin" required>
+                <p data-errorMessage="login" class="errorMessage"></p>
+                <p data-successMessage="login" class="successMessage"></p>
+                <button type="submit" data-entrar="entrar">Entrar</button>
+            </form>
+        </div>
+    </section>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
