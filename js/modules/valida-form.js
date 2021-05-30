@@ -96,4 +96,14 @@ export default function initValidaForm() {
     botaoLogin.addEventListener('click', toggleModalLogin);
     botaoFecharLogin.addEventListener('click', toggleModalLogin);
     botaoEntrar.addEventListener('click', submeterLogin);
+
+
+    // async function puxarDados() {
+    //     const cadastrarDados = fetch('./dados.json');
+    //     const jsonDados = await (await cadastrarDados).json();
+    //     jsonDados[0].email = emailArrayLogin[0];
+    //     jsonDados[0].senha = senhaArrayLogin[0];
+    //     console.log(jsonDados);
+    // }
+    // puxarDados();
 }

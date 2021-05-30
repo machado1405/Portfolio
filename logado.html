@@ -30,8 +30,20 @@
             </div>
             <div class="card card-assinatura" id="card-assinatura">
                 <p class="sub-titulo">Por Apenas 29R$/mês</p>
-                <button>Assine Aqui</button>
+                <button data-modal="assinatura">Assine Aqui</button>
             </div>
+        </div>
+    </section>
+    <section class="modal-container ativo" data-modal="container">
+        <div class="modal">
+            <button data-modal="fechar" class="fechar">X</button>
+            <form action="">
+                <label for="email">Confirme sua assinatura inserindo seu e-mail:</label>
+                <input type="email" for="email" id="email" required>
+                <p data-errorMessage="assinar" class="errorMessage"></p>
+                <p data-successMessage="assinar" class="successMessage"></p>
+                <button type="submit" data-cadastrar="assinar">Assinar</button>
+            </form>
         </div>
     </section>
     <script>
@@ -41,6 +53,26 @@
         const cardCursos = document.querySelector('#card-cursos');
         const cardTecnologias = document.querySelector('#card-tecnologias');
         const cardAssinatura = document.querySelector('#card-assinatura');
+        const modalAssinar = document.querySelector('[data-modal="container"]');
+        const emailAssinar = document.querySelector('#email');
+        const botaoAssinatura = document.querySelector('[data-modal="assinatura"]');
+        const botaoFechar = document.querySelector('[data-modal="fechar"]');
+        const botaoAssinar = document.querySelector('[data-cadastrar="assinar"]');
+        let errorMessage = document.querySelector('[data-errorMessage="assinar"]');
+        let successMessage = document.querySelector('[data-successMessage="assinar"]');
+    
+        function abrirModalAssinar() {
+            modalAssinar.classList.toggle('ativo');
+        }
+        function fecharModal() {
+            modalAssinar.classList.remove('ativo');
+        }
+        
+        function assinar(event) {
+            if (emailAssinar !== 'teste@teste.com') {
+                errorMessage = 'E-mail não existe ou foi digitado incorretamente'
+            }
+        }
 
         function handleDeslogar(event) {
             window.location.href = 'index.html'
@@ -57,7 +89,12 @@
         setTimeout(() => {
             cardAssinatura.classList.add('ativo');
         }, 4000);
-                
+
         botaoSair.addEventListener('click', handleDeslogar);
+        botaoAssinar.addEventListener('click', assinar);
+        botaoAssinatura.addEventListener('click', abrirModalAssinar);
+        botaoFechar.addEventListener('click', fecharModal);
+        abrirModalAssinar();
+        assinar();
     </script>
 </body>

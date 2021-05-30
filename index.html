@@ -76,6 +76,48 @@
             </form>
         </div>
     </section>
+
+    <h3 class="titulo-principal">Calculadora</h3>
+    <section class="teste-calc">
+        <div class="calculadora">
+            <p>Calculadora</p>
+            <div class="inputs">
+                <input type="text" id="displayCalculadora">
+                <input type="text" id="displayCalculadora2">
+                <input type="text" id="resultado" class="resultado">
+            </div>
+            <div class="botoes-calc">
+                <button data-calculadora="somar" type="button">+</button>
+                <button data-calculadora="subtrair" type="button">-</button>
+                <button data-calculadora="multiplicar" type="button">X</button>
+                <button data-calculadora="dividir" type="button">/</button>
+            </div>
+        </div>
+    </section>
+    <h3 class="titulo-principal">Buscar CEP</h3>
+    <section class="cep">
+        <div class="form-cep">
+            <form action="" class="form-cep-sumir">
+                <div class="cep-elem">
+                    <input type="text" id="cep" placeholder="Digite seu CEP">
+                    <button type="submit" id="buscarCep">Buscar</button>
+                </div>
+            </form>
+            <div class="cep-buscado">
+                <label for="rua">Rua</label>
+                <input type="text" id="rua">
+                <label for="bairro">Bairro</label>
+                <input type="text" id="bairro">
+                <label for="cidade">Cidade</label>
+                <input type="text" id="cidade">
+                <label for="estado">Estado</label>
+                <input type="text" id="estado">
+                <label for="ddd">ddd</label>
+                <input type="text" id="ddd">
+            </div>
+        </div>
+    </section>
+
     <script type="module" src="./js/main.js"></script>
 </body>
 
